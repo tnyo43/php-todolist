@@ -45,11 +45,14 @@
                         <td>{$item['title']}</td>
                         <td>{$item['details']}</td>
                         <td>{$item['deadline']}</td>
+                        <td>
+                            <input type=\"button\" onclick=\"location.href='./editItem.php?id={$item['id']}'\" value=\"edit\" />
+                        </td>
                     </tr>";
             }
         ?>
     </table>
 
-    <input type="button" onclick="location.href='./registerItem.php'" value="add item">
+    
 </body>
 </html>

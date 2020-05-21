@@ -21,4 +21,5 @@
         echo $e->getMessage() . PHP_EOL;
         return false;
     }
+
 ?>

@@ -40,7 +40,20 @@
         return "SELECT * FROM todo WHERE user_id = ?;";
     }
 
+    function findToDoByIdANDUserId() {
+        return "SELECT * FROM todo WHERE id = ? AND user_id = ?;";
+    }
+
     function insertToDo() {
         return "INSERT INTO todo(user_id, title, details, deadline) value(?, ?, ?, ?);";
     }
+
+    function updateToDo() {
+        return "UPDATE todo SET title = ?, details = ?, deadline = ? WHERE id = ? AND user_id = ?;";
+    }
+
+    function deleteToDo() {
+        return "DELETE FROM todo WHERE id = ? AND user_id = ?;";
+    }
+
 ?>
