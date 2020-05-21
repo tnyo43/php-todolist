@@ -11,7 +11,7 @@
     }
 
     function findUserByUsername() {
-        return "SELECT name FROM user WHERE name = ?";
+        return "SELECT * FROM user WHERE name = ?";
     }
 
     function insertUser() {
