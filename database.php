@@ -36,6 +36,10 @@
             )";
     }
 
+    function findToDoByUserId() {
+        return "SELECT * FROM todo WHERE user_id = ?;";
+    }
+
     function insertToDo() {
         return "INSERT INTO todo(user_id, title, details, deadline) value(?, ?, ?, ?);";
     }
