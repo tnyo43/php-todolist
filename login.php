@@ -26,7 +26,7 @@
     if (password_verify($_POST['password'], $row['password'])) {
         session_regenerate_id(true);
         $_SESSION['name'] = $name;
-        echo 'login!';
+        echo 'logged in!';
     } else {
         echo MSG_LOGIN_FAIL;
         return false;

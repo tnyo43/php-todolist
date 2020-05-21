@@ -1,3 +1,15 @@
+<?php
+
+    session_start();
+
+    if (isset($_SESSION['name'])) {
+        echo 'Welcome, ' .  htmlspecialchars($_SESSION['name'], ENT_QUOTES, 'utf-8') . "!<br>";
+        echo "<a href='/logout.php'>logout</a>";
+        exit;
+    }
+
+?>
+
 <!DOCTYPE html>
 <htm>
 <head>
