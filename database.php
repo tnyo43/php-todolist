@@ -1,4 +1,5 @@
 <?php
+    // user table
 
     function createUserTable() {
         return
@@ -6,7 +7,7 @@
                 id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
                 name VARCHAR(255),
                 password VARCHAR(255),
-                CREATED TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+                created TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
             )";
     }
 
@@ -18,4 +19,24 @@
         return "INSERT INTO user(name, password) value(?, ?); ";
     }
 
+?>
+
+<?php
+    // todo table
+
+    function createToDoTable() {
+        return
+            "CREATE TABLE IF NOT EXISTS todo(
+                id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+                user_id INT,
+                title VARCHAR(255),
+                details VARCHAR(255),
+                deadline TIMESTAMP,
+                created TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+            )";
+    }
+
+    function insertToDo() {
+        return "INSERT INTO todo(user_id, title, details, deadline) value(?, ?, ?, ?);";
+    }
 ?>
