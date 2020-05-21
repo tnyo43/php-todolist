@@ -10,13 +10,16 @@
 
 ?>
 
-<!DOCTYPE html>
-<htm>
-<head>
-    <meta charset="utf-8">
-    <title>Login</title>
-</head>
+<?php
+    $pageTitle = 'sign in';
+    require('head.php');
+?>
+
 <body>
+    <?php
+        require('header.php');
+    ?>
+
     <h1>sign in</h1>
     <form  action="login.php" method="post">
         <label for="name">name</label>

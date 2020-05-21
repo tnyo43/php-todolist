@@ -17,13 +17,16 @@
 
 ?>
 
-<!DOCTYPE html>
-<htm>
-<head>
-    <meta charset="utf-8">
-    <title>List</title>
-</head>
+<?php
+    $pageTitle = 'todo list';
+    require('head.php');
+?>
+
 <body>
+    <?php
+        require('header.php');
+    ?>
+
     <table>
         <tr>
             <th>title</th>

@@ -1,14 +1,13 @@
 <?php
-
+    $pageTitle = 'register item';
+    require('head.php');
 ?>
 
-<!DOCTYPE html>
-<htm>
-<head>
-    <meta charset="utf-8">
-    <title>register item</title>
-</head>
 <body>
+    <?php
+        require('header.php');
+    ?>
+
     <h1>add new item</h1>
     <form action="addItem.php" method="post">
     <label for="title">title</label>
