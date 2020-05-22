@@ -14,6 +14,15 @@
                 <?php
                     } else {
                 ?>
+                    <li><a href="mypage.php">
+                        <?php
+                            if (isset($_SESSION['icon'])) {
+                                echo "<img src='{$_SESSION["icon"]}' width='64' height='64' alt='mypage'>";
+                            } else {
+                                echo mypage;
+                            }
+                        ?>
+                    </a></li>
                     <li><a href="logout.php">log out</a></li>
                 <?php
                     } 

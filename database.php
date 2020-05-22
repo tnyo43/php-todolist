@@ -7,6 +7,7 @@
                 id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
                 name VARCHAR(255),
                 password VARCHAR(255),
+                icon LONGTEXT,
                 created TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
             )";
     }
@@ -15,8 +16,16 @@
         return "SELECT * FROM user WHERE name = ?";
     }
 
+    function findUserById() {
+        return "SELECT * FROM user WHERE id = ?;";
+    }
+
     function insertUser() {
         return "INSERT INTO user(name, password) value(?, ?); ";
+    }
+
+    function updateIcon() {
+        return "UPDATE user SET icon = ? WHERE id = ?;";
     }
 
 ?>

@@ -27,6 +27,7 @@
         session_regenerate_id(true);
         $_SESSION['name'] = $name;
         $_SESSION['user_id'] = $row['id'];
+        $_SESSION['icon'] = $row['icon'];
         echo 'logged in!';
     } else {
         echo MSG_LOGIN_FAIL;
